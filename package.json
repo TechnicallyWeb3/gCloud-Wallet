@@ -9,7 +9,7 @@
     "node": ">=16"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "set PORT=8080 && react-scripts start",
     "dev": "NODE_ENV=development nodemon src/index.js | pino-pretty",
     "lint": "eslint --ext *.js --ext test/*.js",
     "fix": "eslint --fix --ext *.js --ext test/*.js",
