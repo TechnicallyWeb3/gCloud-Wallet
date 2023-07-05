@@ -1,0 +1,679 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.nav-menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: inline-block;
+}
+
+.nav-menu button {
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 0 0 10px black; /* Updated shadow color */
+}
+.search-bar {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: inline-block;
+}
+
+.search-bar button {
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 0 0 10px black; /* Updated shadow color */
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1;
+  display: none;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  background-color: blue;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 0 10px black; /* Updated shadow color */
+}
+
+.dropdown-menu li {
+  padding: 5px;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 5px 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: blue;
+}
+
+.nav-menu:hover .dropdown-menu {
+  display: block;
+}
+
+body {
+      background-color: #fff;
+      color: #000;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+.landing {
+  background-color: #fff;
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7), 0 0 10px rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7), 0 0 10px rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.look-container {
+  background-color: #fff;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7), 0 0 10px rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.balance {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.dynamic-width {
+  display: inline-block;
+  min-width: 150px; /* Set a minimum width to prevent the container from becoming too small */
+  max-width: 100%; /* Set a maximum width to allow the container to expand as needed */
+  word-break: break-word; /* Break long text into multiple lines if necessary */
+}
+
+.transaction-container {
+  overflow-x: auto; /* Enable horizontal scrolling for the table if needed */
+}
+
+.transaction-table {
+  width: 100%;
+  table-layout: fixed; /* Fix the table layout */
+  border-collapse: collapse;
+}
+
+.transaction-table th,
+.transaction-table td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap; /* Prevent line wrapping */
+  overflow: hidden; /* Hide any overflowing content */
+  text-overflow: ellipsis; /* Display ellipsis (...) for truncated text */
+}
+
+.transaction-row:hover {
+  background-color: #f5f5f5;
+}
+
+.transaction-row:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.heart{
+  color: red;
+  
+}
+
+h1 {
+  font-size: 50px;
+  margin: 10px 0;
+  color: #000;
+}
+
+a {
+  color: blue;
+}
+
+
+    label {
+      color: #000;
+      font-weight: bold;
+      margin-right: 15px;
+      margin-top: 10px;
+    }
+   
+    label[for="formatSelect"] {
+      color: #fff;
+      margin-right: 70px;
+      margin-top: 10px;
+    }
+
+.blue-icon {
+  color: blue;
+}
+
+.icon {
+  color: blue;
+  margin-top: 5px;
+  font-size: 12px; /* Adjust the font size to increase or decrease the icon size */
+  transform: scale(1.5); /* Adjust the scale factor to make the icons bigger or smaller */
+}
+
+.background {
+  background-color: #444;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.avatar {
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+input[type="text"] {
+  padding: 10px 5px; /* Increase the top padding value to create more space */
+  margin-left: 15px;
+}
+button {
+  padding: 10px 20px;
+  margin-left: 15px;
+  cursor: pointer;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 0 10px black; /* Updated shadow color */
+}
+
+button:hover {
+  box-shadow: 0 0 20px black; /* Increased shadow size on hover */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+color: blue;
+  margin-top: 0px;
+  font-size: 20px; /* Adjust the font size to increase or decrease the icon size */
+  transform: scale(1.5); /* Adjust the scale factor to make the icons bigger or smaller */
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+.social-media a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #fe2858;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.social-media-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-media-buttons a {
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-media-buttons img {
+  background-color: #888;
+  color: #000;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.social-media-buttons img:hover {
+  transform: scale(1.2);
+}
+
+.user-details {
+  color: #000;
+}
+
+.user-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.user-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Adjust the number to control the number of columns */
+  grid-gap: 20px; /* Adjust the gap between grid items */
+}
+
+.user-profile {
+  /* Add your styling for user profile here */
+  background-color: #fff;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7), 0 0 10px rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.number {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.label {
+  margin-top: 4px;
+  text-align: center;
+}
+
+.wallet-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.4),
+    -8px -8px 16px rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.connect-button,
+.refresh-button,
+.send-button {
+  background-color: #3366ff;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2),
+    -4px -4px 8px rgba(255, 255, 255, 0.4);
+}
+
+.connect-button:hover,
+.refresh-button:hover,
+.send-button:hover {
+  background-color: #0033cc;
+}
+
+.account-address,
+.balance,
+h2,
+label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.recipient-input,
+.amount-input {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.4);
+}
+
+.recipient-input:focus,
+.amount-input:focus {
+  outline: none;
+  border-color: #3366ff;
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.4),
+    0 0 4px rgba(51, 102, 255, 0.8);
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+}
+
+.menu-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-line {
+  width: 30px;
+  height: 3px;
+  background-color: #000;
+  margin: 5px;
+  transition: transform 0.3s;
+}
+
+.open {
+  transform: rotate(45deg);
+  background-color: #000;
+}
+
+.menu {
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu a {
+  display: block;
+  margin-bottom: 10px;
+  color: #000;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: blue;
+}
+
+.close-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0;
+}
+
+.bitcoin-qt {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bitcoin-qt-sidebar {
+  flex: 0 0 30%;
+  background-color: #f8f8f8;
+  padding: 20px;
+}
+
+.wallet-balance {
+  margin-bottom: 20px;
+}
+
+.wallet-balance h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.wallet-balance p {
+  margin: 5px 0;
+}
+
+.address {
+  font-size: 12px;
+  color: #888;
+}
+
+.wallet-functions {
+  display: flex;
+  flex-direction: column;
+}
+
+.send-button {
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.bitcoin-qt-main {
+  flex: 0 0 70%;
+  padding: 20px;
+}
+
+.recent-transactions h2 {
+  margin-top: 0;
+}
+
+.transaction-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transaction-table th,
+.transaction-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.transaction-table th {
+  font-weight: bold;
+}
+
+.transaction-row:hover {
+  background-color: #f1f1f1;
+}
+
+.send-component {
+  padding: 20px;
+  background-color: #f8f8f8;
+  margin-bottom: 20px;
+}
+
+.close-button {
+  padding: 5px 10px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: #888;
+}
+
+.heart {
+  color: red;
+}
+
+/* CSS for the Send component */
+.send-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.send-container h2 {
+  text-align: center;
+}
+
+.send-container label {
+  margin-right: 10px;
+}
+
+.send-container input[type="text"],
+.send-container input[type="number"] {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.send-container button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.send-container button:hover {
+  background-color: #0056b3;
+}
+
+.send-container .to-input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.send-container .to-input-container input[type="text"] {
+  flex: 1;
+}
+
+.send-container .to-input-container button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #ccc;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.send-container .to-input-container button:hover {
+  background-color: #999;
+}
+
+.send-container .to-label-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.send-container .to-label-container p {
+  margin-right: 10px;
+}
+
+.send-container .to-label-container button {
+  padding: 2px;
+  background-color: #ccc;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.send-container .to-label-container button:hover {
+  background-color: #999;
+}
+
+.send-container .balance-container {
+  margin-top: 20px;
+}
+
+.send-container .balance-container p {
+  margin-bottom: 10px;
+}
+
+.send-container .send-button-container {
+  margin-top: 20px;
+}
+
+.send-container .send-button-container button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.send-container .send-button-container button:hover {
+  background-color: #1e7e34;
+}
